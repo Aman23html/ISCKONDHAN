@@ -1,0 +1,68 @@
+{
+  "title": "ISKCON",
+  "subtitle": "Where Devotion Meets Enlightenment",
+  "paragraph": "The movement was brought to the western world in 1965 by His Divine Grace A.C. Bhaktivedanta Swami Prabhupada, known lovingly by the followers of the movement as ‘Srila Prabhupada’. He wrote over sixty volumes of authoritative translations, commentaries and summary studies of the philosophical and religious classics of India.\n\n Thus, today Srila Prabhupada is recognised as one of India’s greatest spiritual ambassadors of the 20th Century.",
+  "readMore": "READ MORE",
+   "welcomeTo": "WELCOME TO",
+  "templeName": "Iskcon Dhanbad",
+  "locationTag": "Temple | Jagjivan Nagar, Dhanbad",
+  "location": "Location",
+  "stat1": "MEAL SERVED PER YEAR",
+  "stat2": "THOUSANDS MEAL SERVED DURING COVID-19",
+  "stat3": "YEARS OF SERVICE TO HUMANITY",
+  "templeSchedule": "TEMPLE SCHEDULE",
+  "MangalaAarti": "Mangala Aarti",
+  "TulsiAarti": "Tulsi Aarti",
+  "DarshanAarti": "Darshan Aarti",
+  "GuruPuja": "Guru Puja",
+  "BhagwatamClass": "Srimad Bhagwatam Class",
+  "TempleCloses": "Temple Closes",
+  "Darshan": "Darshan",
+  "SandhyaAarti": "Sandhya Aarti",
+  "TempleClose": "Temple Close",
+
+
+  "seva": {
+    "templeConstruction": {
+      "title": "Temple Construction",
+      "desc": "Contribute to the ISKCON Temple Construction Seva, help build a facility to provide meals to thousands of devotees."
+    },
+    "annaDaan": {
+      "title": "Anna Daan",
+      "desc": "Help us feed the needy through this blessed seva."
+    },
+    "gitaDaan": {
+      "title": "Gita Daan",
+      "desc": "Distribute the divine knowledge of Bhagavad Gita."
+    },
+    "tribalCare": {
+      "title": "Tribal Care Seva",
+      "desc": "Support spiritual outreach and essentials in tribal areas."
+    },
+    "vaishnavaSeva": {
+      "title": "Vaishnava Seva",
+      "desc": "Serve the devotees through prasadam and essentials."
+    },
+    "nityaSeva": {
+      "title": "Nitya Seva",
+      "desc": "Support the daily rituals and offerings to the Deities."
+    }
+  },
+
+  "courses": {
+    "heading": "Courses We Offer",
+    "readMore": "Read More",
+    "youthCourse": {
+      "title": "Youth Course",
+      "desc": "Engage with spirituality in a youthful, vibrant setting."
+    },
+    "gitaClasses": {
+      "title": "Gita Classes",
+      "desc": "Deepen your understanding of the Bhagavad Gita through expert guidance."
+    },
+    "sundayFeast": {
+      "title": "Sunday Feast",
+      "desc": "Experience bliss with kirtan, wisdom, and delicious prasadam every Sunday."
+    }
+  }
+}
