@@ -33,7 +33,7 @@ import AnnaDaan from './components/Dontionmenu/AnnaDaan';
 import GitaDaan from './components/Dontionmenu/GitaDaan';
 import TribalCare from './components/Dontionmenu/TribalCare';
 import VaishnavSeva from './components/Dontionmenu/VaishnavSeva';
-import NityaSeva from './components/Dontionmenu/Nityaseva';
+import NityaSeva from './components/Dontionmenu/NityaSeva';
 import FestivalSupport from './components/Dontionmenu/FestivalSupport';
 
 import DonationPaymentPage from './pages/donation/DonationPaymentPage';
