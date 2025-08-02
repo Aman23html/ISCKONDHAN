@@ -9,8 +9,9 @@ const TempleConstruction = () => {
   const navigate = useNavigate();
 
   const handleDonationClick = (amount) => {
-    const encodedSeva = encodeURIComponent(sevaName);
-    navigate(`/donate/payment/${encodedSeva}/${amount}`);
+    const seva = encodeURIComponent(sevaName);
+
+    navigate(`/donate/payment/${seva}/${amount}`);
   };
 
   return (

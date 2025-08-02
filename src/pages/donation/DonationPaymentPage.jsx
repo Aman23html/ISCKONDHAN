@@ -11,7 +11,8 @@ const sevaImageMap = {
 };
 
 const DonationPaymentPage = () => {
-  const { seva, amount } = useParams();
+  const { sevaName, amount } = useParams();
+  let seva=decodeURIComponent(sevaName);
   const navigate = useNavigate();
   const [cart, setCart] = useState([]);
 
