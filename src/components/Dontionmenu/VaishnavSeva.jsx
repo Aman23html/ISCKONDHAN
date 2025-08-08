@@ -1,12 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { HandHeart } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const donationOptions = [101, 551, 1100, 2500, 5000, 11000, 51000];
 const sevaName = "Vaishnava Seva"; // This will be passed dynamically in the URL
 
 const VaishnavaSeva = () => {
   const navigate = useNavigate();
+  const {t} = useTranslation();
 
   const handleDonationClick = (amount) => {
     const encodedSeva = encodeURIComponent(sevaName);
@@ -16,7 +18,7 @@ const VaishnavaSeva = () => {
   return (
     <div className="bg-gradient-to-br from-yellow-50 via-amber-100 to-yellow-50 shadow-2xl rounded-3xl p-8 max-w-4xl mx-auto mt-12 mb-16 border border-amber-300">
       <h2 className="text-4xl font-extrabold text-center text-amber-700 mb-6">
-        🍚 {sevaName} Seva
+        {t('vaishnavaSeva.title')}
       </h2>
 
       <img
@@ -26,14 +28,14 @@ const VaishnavaSeva = () => {
       />
 
       <p className="text-lg text-gray-700 mb-10 leading-relaxed text-center font-medium">
-        Contribute to feeding devotees, saints, and needy people through this auspicious service.
+        {t('vaishnavaSeva.description')}
         <br />
-        Each donation provides nourishing prasadam and blessings.
+        {t('vaishnavaSeva.footerNote')}
       </p>
 
       <div className="bg-white rounded-xl border border-amber-300 p-6 shadow-inner">
         <div className="bg-amber-400 text-white text-center py-3 rounded-t-xl font-semibold text-lg tracking-wide">
-          Choose Your Seva Amount
+          {t('vaishnavaSeva.chooseAmount')}
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 p-5">

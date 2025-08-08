@@ -1,12 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { HandHeart } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const donationOptions = [101, 551, 1100, 2500, 5000, 11000, 51000];
 const sevaName = "Anna Daan";
 
 const AnnaDaan = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleDonationClick = (amount) => {
     const encodedSeva = encodeURIComponent(sevaName);
@@ -19,10 +21,10 @@ const AnnaDaan = () => {
       {/* Header */}
       <div className="text-center mb-10">
         <h1 className="text-5xl font-extrabold text-amber-700 drop-shadow-md">
-          🍚 {sevaName} Seva
+          {t('annaDaan.title')}
         </h1>
         <p className="text-lg text-gray-600 mt-4 font-medium max-w-3xl mx-auto">
-          Offer sanctified prasadam and nourish both body and soul by supporting this divine service.
+          {t('annaDaan.subtitle')}
         </p>
       </div>
 
@@ -37,26 +39,24 @@ const AnnaDaan = () => {
 
       {/* Description */}
       <div className="bg-white border border-amber-200 p-6 md:p-8 rounded-2xl shadow-inner mb-12">
-        <h2 className="text-2xl font-bold text-amber-700 mb-4">Why Support Anna Daan?</h2>
+        <h2 className="text-2xl font-bold text-amber-700 mb-4">
+          {t('annaDaan.whySupportTitle')}
+        </h2>
         <p className="text-gray-800 text-[17px] leading-relaxed">
-          Food distribution is one of the highest acts of compassion in Vedic culture.
-          As said in scriptures, <span className="italic">“Annadānam Paramam Dānam”</span> – "Of all charities, giving food is the supreme."
-          <br /><br />
-          When we offer sanctified prasadam, it carries spiritual potency. Lord Krishna accepts such offerings with love, and when it is distributed, it becomes a medium of mercy.
-          <br /><br />
-          At ISKCON, through programs like Mid-Day Meals and Food for Life, thousands are fed every day. Your donation becomes an offering to Krishna and a blessing to many.
-          <br /><br />
+          {t('annaDaan.description')}<br /><br />
+          {t('annaDaan.description2')}<br /><br />
+          {t('annaDaan.description3')}<br /><br />
           <span className="font-semibold text-amber-800">
-            “Annadānam paramam dānam, vidyādānam tataḥ param”
+            {t('annaDaan.shloka')}
           </span><br />
-          Food charity is supreme, yet knowledge-giving is greater still.
+          {t('annaDaan.shlokaMeaning')}
         </p>
       </div>
 
       {/* Donation Section */}
       <div className="bg-white border border-amber-300 rounded-2xl shadow-md p-8">
         <h3 className="text-2xl font-semibold text-center text-amber-800 mb-6">
-          Choose Your Seva Amount
+          {t('annaDaan.chooseAmount')}
         </h3>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-center">

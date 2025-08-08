@@ -3,7 +3,7 @@
   "subtitle": "Where Devotion Meets Enlightenment",
   "paragraph": "The movement was brought to the western world in 1965 by His Divine Grace A.C. Bhaktivedanta Swami Prabhupada, known lovingly by the followers of the movement as ‘Srila Prabhupada’. He wrote over sixty volumes of authoritative translations, commentaries and summary studies of the philosophical and religious classics of India.\n\n Thus, today Srila Prabhupada is recognised as one of India’s greatest spiritual ambassadors of the 20th Century.",
   "readMore": "READ MORE",
-   "welcomeTo": "WELCOME TO",
+  "welcomeTo": "WELCOME TO",
   "templeName": "Iskcon Dhanbad",
   "locationTag": "Temple | Jagjivan Nagar, Dhanbad",
   "location": "Location",
@@ -20,7 +20,6 @@
   "Darshan": "Darshan",
   "SandhyaAarti": "Sandhya Aarti",
   "TempleClose": "Temple Close",
-
 
   "seva": {
     "templeConstruction": {
@@ -64,5 +63,159 @@
       "title": "Sunday Feast",
       "desc": "Experience bliss with kirtan, wisdom, and delicious prasadam every Sunday."
     }
+  },
+
+  "bannerOne": {
+    "message": "Through selfless devotion to Lord Krishna, one finds fulfillment beyond fleeting material pleasures, fostering a connection with the divine that promises enduring joy and peace in this life and the hereafter.",
+    "title": "Krishna Consciousness",
+    "subtitle": "the art of spiritual living"
+  },
+
+  "bannerTwo": {
+  "mahamantra": "HARE KRISHNA HARE KRISHNA KRISHNA KRISHNA HARE HARE   HARE RAMA HARE RAMA RAMA RAMA HARE HARE   HARE KRISHNA HARE KRISHNA KRISHNA KRISHNA HARE HARE   HARE RAMA HARE RAMA RAMA RAMA HARE HARE",
+  "title": "Krishna Consciousness",
+  "subtitle": "The art of mindful devotion",
+  "rightBlockLine1": "CHANT",
+  "rightBlockLine2": "HARE KRISHNA",
+  "rightBlockLine3": "&",
+  "rightBlockLine4": "BE HAPPY"
+  },
+
+
+  "about": {
+  "title": "About ISKCON Dhanbad",
+  "description": "A spiritual sanctuary in the coal capital of India, ISKCON Dhanbad brings the essence of devotion through sacred teachings, prasadam, festivals, and loving service.",
+
+  "missionTitle": "Our Mission",
+  "missionDescription": "We are a branch of the International Society for Krishna Consciousness (ISKCON), founded by His Divine Grace A.C. Bhaktivedanta Swami Prabhupada. ISKCON Dhanbad strives to spread Krishna consciousness by nurturing spiritual values and providing devotional experiences.",
+  
+  "missionPoints": [
+    "Daily Bhagavad Gita classes & morning programs",
+    "Krishna Prasadam for all visitors",
+    "Festivals: Janmashtami, Rath Yatra, Gaura Purnima, etc.",
+    "Spiritual outreach and book distribution",
+    "Youth & Children’s spiritual engagement programs"
+  ],
+
+  "quote": "\"Chant Hare Krishna and be happy. The goal of life is to return back to Godhead and serve Krishna eternally.\"",
+  "quoteAuthor": "– Srila Prabhupada",
+
+  "connectTitle": "Connect with Us"
+ },
+
+ "services": {
+  "heading": "Courses We Offer",
+  "enrollButton": "Enroll / Inquire Now",
+
+  "youthCourse": {
+    "title": "Youth Course",
+    "description": "Specially designed for students & youth to cultivate values, discipline, and devotion."
+  },
+  "gitaClasses": {
+    "title": "Gita Classes",
+    "description": "Systematic and simplified understanding of Bhagavad Gita with practical application."
+  },
+  "sundayFest": {
+    "title": "Sunday Fest",
+    "description": "Weekly festival with spiritual discourse, kirtan, prasadam, and joyful association."
+  }
+  },
+
+ "donate": {
+  "heading": "Support a Spiritual Cause",
+  "subheading": "Choose from our various devotional services and extend your support to ISKCON Dhanbad’s divine mission.",
+  "backButton": "Back to Donation Menu",
+
+  "templeConstruction": {
+    "title": "Temple Construction",
+    "description": "Help us expand the temple and build a spiritual sanctuary."
+  },
+  "annaDaan": {
+    "title": "Anna Daan (Food for All)",
+    "description": "Feed the needy and devotees with love and compassion."
+  },
+  "nityaSeva": {
+    "title": "Nitya Seva (Daily Worship)",
+    "description": "Support daily deity worship and temple operations."
+  },
+  "vaishnavaSeva": {
+    "title": "Vaishnav Seva",
+    "description": "Serve dedicated devotees who carry out daily temple services."
+  },
+  "gitaDaan": {
+    "title": "Gita Daan",
+    "description": "Distribute Bhagavad Gita and Vedic wisdom across the world."
+  },
+  "tribalCare": {
+    "title": "Tribal Care Seva",
+    "description": "Uplift tribal communities through seva, education, and food."
+  },
+  "festivalSupport": {
+    "title": "Festival Support",
+    "description": "Contribute towards grand spiritual festivals and yatras."
+  }
+},
+
+"templeConstruction": {
+  "title": "🛕 Temple Construction Seva",
+  "galleryAlt": "Temple Construction",
+  "intro": "Participate in this divine mission by contributing to the construction of sacred spaces.",
+
+  "para1": "To build a temple for Lord Krishna is not merely constructing walls—it is establishing a spiritual lighthouse for countless souls. Each brick becomes a blessing, each donation a step toward eternity.",
+  "para2": "Srila Prabhupada said, “A temple is a transcendental embassy of the spiritual world.”",
+  "para3": "By contributing to temple construction, one helps manifest Lord Krishna’s divine abode on Earth. Temples become centers for kirtan, prasadam, deity worship, and spiritual education.",
+  "sloka": "“yatrasthitā nāradītā devatāḥ”",
+  "slokaMeaning": "“Where the Lord is worshipped, that place becomes a tirtha (holy place).”",
+  "para4": "Your donation isn’t just wealth—it’s bhakti in action. Your support helps build the altar, temple domes, and cultural hall for generations to come.",
+
+  "donationTitle": "Choose Your Seva Amount"
+},
+
+
+  "annaDaan": {
+    "title": "🍚 Anna Daan Seva",
+    "subtitle": "Offer sanctified prasadam and nourish both body and soul by supporting this divine service.",
+    "whySupportTitle": "Why Support Anna Daan?",
+    "description": "Food distribution is one of the highest acts of compassion in Vedic culture. As said in scriptures, “Annadānam Paramam Dānam” – \"Of all charities, giving food is the supreme.\"",
+    "description2": "When we offer sanctified prasadam, it carries spiritual potency. Lord Krishna accepts such offerings with love, and when it is distributed, it becomes a medium of mercy.",
+    "description3": "At ISKCON, through programs like Mid-Day Meals and Food for Life, thousands are fed every day. Your donation becomes an offering to Krishna and a blessing to many.",
+    "shloka": "“Annadānam paramam dānam, vidyādānam tataḥ param”",
+    "shlokaMeaning": "Food charity is supreme, yet knowledge-giving is greater still.",
+    "chooseAmount": "Choose Your Seva Amount"
+  },
+  "tribalCare": {
+    "title": "🪶 Tribal Care Seva",
+    "subtitle": "Help support our beloved tribal communities with prasadam, spiritual care, and joyful seva.",
+    "description": "Your kind donations help nourish hearts and souls. Every rupee goes toward prasadam distribution, welfare services, and enhancing the lives of tribal devotees. Experience the joy of giving!",
+    "chooseAmount": "Choose Your Seva Amount",
+    "footerNote": "Every contribution is a step toward spiritual upliftment and social harmony."
+  },
+
+  "vaishnavaSeva": {
+  "title": "🍚 Vaishnava Seva",
+  "description": "Contribute to feeding devotees, saints, and needy people through this auspicious service. Each donation provides nourishing prasadam and blessings.",
+  "chooseAmount": "Choose Your Seva Amount"
+},
+
+"festivalSupport": {
+  "heading": "Festival Seva Opportunities",
+  "rathYatra": {
+    "title": "Rath Yatra",
+    "description": "Rath Yatra is the grand chariot festival of Lord Jagannath. Join us in the divine celebrations and contribute to its success."
+  },
+  "janmashtami": {
+    "title": "Janmashtami",
+    "description": "Celebrate the divine appearance day of Lord Krishna with joy, devotion, and your heartfelt support for temple events."
+  },
+  "radhaAshtami": {
+    "title": "Radha Ashtami",
+    "description": "Honor Srimati Radharani's divine qualities and help us conduct beautiful sevas during Radha Ashtami."
   }
 }
+  
+}
+
+
+  
+
+

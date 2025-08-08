@@ -1,55 +1,63 @@
 import React from 'react';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { GiLotus, GiReceiveMoney, GiTempleGate, GiMeal, GiTribalMask } from 'react-icons/gi';
+import {
+  GiLotus,
+  GiReceiveMoney,
+  GiTempleGate,
+  GiMeal,
+  GiTribalMask
+} from 'react-icons/gi';
 import { FaHandsWash, FaBook } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const DonationLayout = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { t } = useTranslation();
 
   const showBackButton = location.pathname !== '/donate';
 
   const donationOptions = [
     {
-      name: 'Temple Construction',
-      description: 'Help us expand the temple and build a spiritual sanctuary.',
+      name: t('donate.templeConstruction.title'),
+      description: t('donate.templeConstruction.description'),
       icon: <GiTempleGate className="text-4xl text-amber-600" />,
       link: 'temple-construction'
     },
     {
-      name: 'Anna Daan (Food for All)',
-      description: 'Feed the needy and devotees with love and compassion.',
+      name: t('donate.annaDaan.title'),
+      description: t('donate.annaDaan.description'),
       icon: <GiMeal className="text-4xl text-amber-600" />,
       link: 'anna-daan'
     },
     {
-      name: 'Nitya Seva (Daily Worship)',
-      description: 'Support daily deity worship and temple operations.',
+      name: t('donate.nityaSeva.title'),
+      description: t('donate.nityaSeva.description'),
       icon: <GiLotus className="text-4xl text-amber-600" />,
       link: 'nitya-seva'
     },
     {
-      name: 'Vaishnav Seva',
-      description: 'Serve dedicated devotees who carry out daily temple services.',
+      name: t('donate.vaishnavaSeva.title'),
+      description: t('donate.vaishnavaSeva.description'),
       icon: <FaHandsWash className="text-4xl text-amber-600" />,
       link: 'vaishnava-seva'
     },
     {
-      name: 'Gita Daan',
-      description: 'Distribute Bhagavad Gita and Vedic wisdom across the world.',
+      name: t('donate.gitaDaan.title'),
+      description: t('donate.gitaDaan.description'),
       icon: <FaBook className="text-4xl text-amber-600" />,
       link: 'gita-daan'
     },
     {
-      name: 'Tribal Care Seva',
-      description: 'Uplift tribal communities through seva, education, and food.',
+      name: t('donate.tribalCare.title'),
+      description: t('donate.tribalCare.description'),
       icon: <GiTribalMask className="text-4xl text-amber-600" />,
       link: 'tribal-care-seva'
     },
     {
-      name: 'Festival Support',
-      description: 'Contribute towards grand spiritual festivals and yatras.',
+      name: t('donate.festivalSupport.title'),
+      description: t('donate.festivalSupport.description'),
       icon: <GiReceiveMoney className="text-4xl text-amber-600" />,
       link: 'festival-support'
     }
@@ -57,7 +65,7 @@ const DonationLayout = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-tr from-amber-100 via-white to-yellow-50 px-4 py-10 sm:px-8 relative overflow-hidden">
-      {/* Decorative Mandala BG */}
+      {/* Background Image */}
       <div className="absolute inset-0 opacity-10 z-0 bg-[url('/mandala-bg.png')] bg-center bg-no-repeat bg-cover" />
 
       <motion.div
@@ -71,16 +79,16 @@ const DonationLayout = () => {
           <div className="flex justify-center items-center gap-3 text-amber-600 mb-2">
             <GiReceiveMoney className="text-4xl" />
             <h1 className="text-3xl sm:text-4xl font-bold tracking-wide drop-shadow-sm">
-              Support a Spiritual Cause
+              {t('donate.heading')}
             </h1>
             <GiLotus className="text-3xl" />
           </div>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
-            Choose from our various devotional services and extend your support to ISKCON Dhanbad’s divine mission.
+            {t('donate.subheading')}
           </p>
         </div>
 
-        {/* Show Back Button if inside a donation sub-page */}
+        {/* Back Button */}
         {showBackButton && (
           <motion.div
             initial={{ opacity: 0, x: -10 }}
@@ -92,12 +100,12 @@ const DonationLayout = () => {
               onClick={() => navigate('/donate')}
               className="flex items-center text-sm bg-amber-200/70 text-amber-800 px-4 py-2 rounded-full hover:bg-amber-300 transition duration-200 shadow-sm"
             >
-              ← Back to Donation Menu
+              ← {t('donate.backButton')}
             </button>
           </motion.div>
         )}
 
-        {/* Show Cards only on main /donate route */}
+        {/* Main Donation Cards */}
         {location.pathname === '/donate' && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
             {donationOptions.map((donation, index) => (
@@ -121,7 +129,7 @@ const DonationLayout = () => {
           </div>
         )}
 
-        {/* Sub Page Content (Outlet) */}
+        {/* Outlet for nested donation routes */}
         <div className="border-t border-amber-100 pt-6">
           <Outlet />
         </div>

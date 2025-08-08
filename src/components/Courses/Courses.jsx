@@ -67,6 +67,14 @@ const Courses = () => {
                   {item.desc}
                 </p>
               </div>
+              <div className='pt-1 flex gap-2'>
+                <div className='line-through text-blue-300 text-sm mb-2'>
+                  RS 500
+                </div>
+                <div className='text-[#df7326] text-sm ml-2'>
+                  RS 0
+                </div>
+              </div>
               <button
                 onClick={() => navigate(item.link)}
                 className="mt-6 bg-[#df7326] text-white font-medium py-2 px-5 rounded-md hover:bg-[#c65a1f] transition duration-300"
