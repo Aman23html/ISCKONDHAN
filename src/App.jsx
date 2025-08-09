@@ -33,14 +33,14 @@ import AnnaDaan from './components/Dontionmenu/AnnaDaan';
 import GitaDaan from './components/Dontionmenu/GitaDaan';
 import TribalCare from './components/Dontionmenu/TribalCare';
 import VaishnavSeva from './components/Dontionmenu/VaishnavSeva';
-import NityaSeva from './components/Dontionmenu/NityaSeva';
+import NityaSeva from './components/Dontionmenu/Nityaseva';
 import FestivalSupport from './components/Dontionmenu/FestivalSupport';
 
 import DonationPaymentPage from './pages/donation/DonationPaymentPage';
 import YouthCourse from './components/CoursesOffer/YouthCourse';
 import GitaClasses from './components/CoursesOffer/GitaClasses';
 import SundayFeast from './components/CoursesOffer/SundayFeast';
-
+import DonationForm from './components/DonationForm';
 
 
 const App = () => {
@@ -94,6 +94,8 @@ const App = () => {
 
           {/* Donation payment page */}
           <Route path="/donate/payment/:sevaName/:amount" element={<DonationPaymentPage />} />
+          <Route path="/donate/form" element={<DonationForm />} />
+
 
          
 

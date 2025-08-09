@@ -1,60 +1,115 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { FaInstagram, FaFacebookF, FaYoutube, FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
 
 const FootTop = () => {
+  const { t } = useTranslation();
+  const scrollToPoster = (e) => {
+    e.preventDefault();
+    const section = document.getElementById('poster');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="relative bg-[#ff6d05] text-white py-1 px-4 md:px-20 overflow-hidden">
+    <div className="relative bg-gradient-to-r from-[#ff6b00] via-[#ff8533] to-[#ff6b00] text-white overflow-hidden ">
+
       {/* 🔁 Mahamantra Marquee */}
-      <div className="relative top-0 left-0 w-full animate-marquee whitespace-nowrap z-0  ">
-        <div className='marquee'>
-          <p className="relative text-2xl md:text-3xl font-bold  text-yellow-200 tracking-wider  [text-shadow:0_0_10px_#fef08a,0_0_30px_#fde047] ">
-          HARE KRISHNA HARE KRISHNA KRISHNA KRISHNA HARE HARE &nbsp; HARE RAMA HARE RAMA RAMA RAMA HARE HARE &nbsp; 
-          HARE KRISHNA HARE KRISHNA KRISHNA KRISHNA HARE HARE &nbsp; HARE RAMA HARE RAMA RAMA RAMA HARE HARE
-        </p>
+      <div className="w-full py-2 overflow-hidden">
+        <div className="animate-[marquee_20s_linear_infinite] whitespace-nowrap">
+          <p className="text-lg md:text-xl font-bold text-yellow-200 tracking-wider drop-shadow-[0_0_3px_#fde047]">
+            {t('footer.mahamantra')}
+          </p>
         </div>
-    </div>
+      </div>
 
       {/* 🔶 Footer Top Content */}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-10 text-center md:text-left">
-        
-        {/* ISKCON Info */}
-        <div className="max-w-xl space-y-2 text-[#fdbe51] flex flex-col items-center">
-          <h3 className="text-2xl font-bold">ISKCON DHANBAD</h3>
-          <h4 className="text-2xl font-bold">JAGJIVAN NAGAR, DHANBAD</h4>
-          <span>
-            <p className="text-sm text-white font-semibold">
-            Bunglow no 23, Old Doctor’s colony, in front of BJP Office (Raj Sinha), 
-            Near Central Hospital, Nutandih,
-            Jagjivan Nagar, Dhanbad, Jharkhand - 826003
-          </p>
-          </span>
-        </div>
+      <div className="px-4 md:px-20 py-8 grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
 
-        {/* Social Links */}
-        <div className="space-y-2">
-          <h3 className="text-2xl font-bold text-[#fdbe51]">FOLLOW US :</h3>
-          <div className="space-y-1 text-white text-lg font-bold flex gap-5 flex-row md:flex-col justify-center items-center">
-            <a href="https://instagram.com/iskcondhanbadofficial" target="_blank" rel="noopener noreferrer" className="hover:underline">
-              INSTAGRAM
-            </a>
-            <a href="https://facebook.com/iskcondhanbadofficial" target="_blank" rel="noopener noreferrer" className="hover:underline">
-              FACEBOOK
-            </a>
-            <a href="https://youtube.com/@iskcondhanbad" target="_blank" rel="noopener noreferrer" className="hover:underline">
-              YOUTUBE
-            </a>
+        {/* ISKCON Info */}
+        <div className="space-y-3 text-[#fdbe51]">
+          <h3 className="text-2xl font-bold">{t('footer.iskconTitle')}</h3>
+          <h4 className="text-lg font-semibold">{t('footer.location')}</h4>
+          <p className="text-sm text-white leading-relaxed">
+            Bunglow no 23, Old Doctor’s colony, in front of BJP Office (Raj Sinha), 
+            Near Central Hospital, Nutandih, Jagjivan Nagar, Dhanbad, Jharkhand - 826003
+          </p>
+          <div className="space-y-1">
+            <p className="flex items-center gap-2 text-white text-sm">
+              <FaPhoneAlt className="text-yellow-300" /> +91 98765 43210
+            </p>
+            <p className="flex items-center gap-2 text-white text-sm">
+              <FaEnvelope className="text-yellow-300" /> iskcondhanbad@gmail.com
+            </p>
           </div>
         </div>
 
-        {/* Donate Button */}
-        <div>
+        {/* Quick Links */}
+        <div className="space-y-3">
+          <h3 className="text-xl font-bold text-[#fdbe51]">QUICK LINKS</h3>
+          <ul className="space-y-2 text-sm">
+            <li><a href="/about" className="hover:underline">About Us</a></li>
+            <li>
+              <a href="#poster-section" onClick={scrollToPoster} className="hover:underline">
+                Upcoming Events
+              </a>
+            </li>
+            <li><a href="/gallery" className="hover:underline">Gallery</a></li>
+            <li><a href="/contact" className="hover:underline">Contact Us</a></li>
+          </ul>
+        </div>
+
+        {/* Temple Timings */}
+        <div className="space-y-3">
+          <h3 className="text-xl font-bold text-[#fdbe51] flex items-center gap-2">
+            <FaClock /> TEMPLE TIMINGS
+          </h3>
+          <ul className="space-y-1 text-sm text-white">
+            <li>🕗 Mangal Aarti: 4:30 AM</li>
+            <li>🕘 Darshan Opens: 7:30 AM</li>
+            <li>🕒 Sandhya Aarti: 7:00 PM</li>
+            <li>🕘 Temple Closes: 8:30 PM</li>
+          </ul>
+        </div>
+
+        {/* Social Links & Donate */}
+        <div className="space-y-4">
+          <h3 className="text-xl font-bold text-[#fdbe51]">FOLLOW US :</h3>
+          <div className="flex gap-5 text-lg">
+            <a href="https://instagram.com/iskcondhanbadofficial" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+              <FaInstagram />
+            </a>
+            <a href="https://facebook.com/iskcondhanbadofficial" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+              <FaFacebookF />
+            </a>
+            <a href="https://youtube.com/@iskcondhanbad" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+              <FaYoutube />
+            </a>
+          </div>
           <a
             href="/donate"
-            className="inline-block px-6 py-2 text-sm font-semibold text-[#ff630f] bg-gradient-to-b from-white to-gray-400 rounded-full shadow-md hover:scale-105 transition"
+            className="inline-block px-6 py-3 text-sm font-semibold text-[#ff6b00] bg-white rounded-full shadow-lg hover:bg-yellow-300 hover:scale-105 transition-all"
           >
             Donate
           </a>
         </div>
       </div>
+
+      {/* Spiritual Quote */}
+      <div className="bg-[#e65c00] text-center py-3 text-yellow-200 text-sm font-medium">
+        "Chant Hare Krishna and be happy" — Srila Prabhupada
+      </div>
+
+      {/* Marquee Animation Keyframes */}
+      <style>
+        {`
+          @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+          }
+        `}
+      </style>
     </div>
   );
 };

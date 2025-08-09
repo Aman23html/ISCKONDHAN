@@ -211,7 +211,28 @@
     "title": "Radha Ashtami",
     "description": "Honor Srimati Radharani's divine qualities and help us conduct beautiful sevas during Radha Ashtami."
   }
-}
+},
+"footer":{
+    "mahamantra": "Hare Krishna Hare Krishna Krishna Krishna Hare Hare Hare Rama Hare Rama Rama Rama Hare Hare",
+    "iskconTitle": "ISKCON DHANBAD",
+    "location": "JAGJIVAN NAGAR, DHANBAD",
+    "address": "Bunglow no 23, Old Doctor’s colony, in front of BJP Office (Raj Sinha), Near Central Hospital, Nutandih, Jagjivan Nagar, Dhanbad, Jharkhand - 826003",
+    "phone": "+91 98765 43210",
+    "email": "iskcondhanbad@gmail.com",
+    "quickLinks": "QUICK LINKS",
+    "about": "About Us",
+    "upcoming": "Upcoming Events",
+    "gallery": "Gallery",
+    "contact": "Contact Us",
+    "timings": "TEMPLE TIMINGS",
+    "mangal": "Mangal Aarti: 4:30 AM",
+    "darshan": "Darshan Opens: 7:30 AM",
+    "sandhya": "Sandhya Aarti: 7:00 PM",
+    "close": "Temple Closes: 8:30 PM",
+    "follow": "FOLLOW US :",
+    "donate": "Donate",
+    "quote": "\"Chant Hare Krishna and be happy\" — Srila Prabhupada"
+  }
   
 }
 

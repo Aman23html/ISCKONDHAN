@@ -57,7 +57,7 @@ const DonationPaymentPage = () => {
     cart.reduce((total, item) => total + item.amount * item.quantity, 0);
 
   const goToCheckout = () => {
-    navigate('/payment');
+    navigate('/donate/form');
   };
 
   return (
