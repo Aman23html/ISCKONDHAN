@@ -32,15 +32,14 @@ const FootTop = () => {
           <h3 className="text-2xl font-bold">{t('footer.iskconTitle')}</h3>
           <h4 className="text-lg font-semibold">{t('footer.location')}</h4>
           <p className="text-sm text-white leading-relaxed">
-            Bunglow no 23, Old Doctor’s colony, in front of BJP Office (Raj Sinha), 
-            Near Central Hospital, Nutandih, Jagjivan Nagar, Dhanbad, Jharkhand - 826003
+            {t('footer.address')}
           </p>
           <div className="space-y-1">
             <p className="flex items-center gap-2 text-white text-sm">
-              <FaPhoneAlt className="text-yellow-300" /> +91 98765 43210
+              <FaPhoneAlt className="text-yellow-300" /> {t('footer.phone')} +91 98765 43210
             </p>
             <p className="flex items-center gap-2 text-white text-sm">
-              <FaEnvelope className="text-yellow-300" /> iskcondhanbad@gmail.com
+              <FaEnvelope className="text-yellow-300" /> {t('footer.email')} iskcondhanbad@gmail.com
             </p>
           </div>
         </div>
