@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-
+import { useLocation } from 'react-router-dom';
+import config from "../config.json"; 
 const DonationForm = () => {
+  const { state } = useLocation();
+  console.log(state.amount)
   const [formData, setFormData] = useState({
     name: "",
     pan: "",
@@ -14,6 +17,49 @@ const DonationForm = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  const handleDonate = async (e) => {
+e.preventDefault()
+    try {
+        // Create order on backend
+        const orderRes = await fetch("http://localhost:5000/create-order", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ amount: state.amount })
+        });
+
+        const orderData = await orderRes.json();
+
+        const options = {
+          key: config.RAZORPAY_KEY_ID,
+          amount: state.amount,
+          currency: "INR",
+          name: "ISKCON Dhanbad",
+          description: "Donation ",
+          order_id: orderData.id,
+          handler: function (response) {
+            fetch("/api/payment-verify", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(response)
+            });
+          },
+          prefill:formData,
+          notes: formData,
+          theme: {
+            color: "#3399cc"
+          }
+        };
+
+        const rzp = new window.Razorpay(options);
+        rzp.open();
+    } catch (err) {
+        console.error(err);
+    }
+};
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -161,8 +207,9 @@ const DonationForm = () => {
           <button
             type="submit"
             className="w-full bg-[#ff6b00] text-white font-semibold py-3 rounded-lg shadow-md hover:bg-[#e65c00] hover:scale-105 transition-transform"
+          onClick={handleDonate}
           >
-            Submit Details
+            Donate 
           </button>
         </form>
 

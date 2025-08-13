@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const SocialMedia = () => {
   const [activeTab, setActiveTab] = useState('instagram');
 
-  const content = {
+  const hardCodedContent = {
     instagram: {
       img: '/SocialMedia/insta.png',
       link: 'https://instagram.com/iskcondhanbadofficial',
@@ -38,6 +38,10 @@ const SocialMedia = () => {
       ],
     },
   };
+
+const [content ,setContent]=useState(hardCodedContent);
+
+
 
   return (
     <div className="relative my-10 md:my-20 py-16 px-6 md:px-20 bg-orange-100 bg-cover bg-center text-center overflow-hidden">
