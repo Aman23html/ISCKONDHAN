@@ -34,7 +34,7 @@ e.preventDefault()
 
         const options = {
           key: config.RAZORPAY_KEY_ID,
-          amount: state.amount,
+          amount: state.amount*100,
           currency: "INR",
           name: "ISKCON Dhanbad",
           description: "Donation ",
