@@ -3,49 +3,27 @@ import React, { useState } from 'react';
 const SocialMedia = () => {
   const [activeTab, setActiveTab] = useState('instagram');
 
-  const hardCodedContent = {
+  const socialLinks = {
     instagram: {
       img: '/SocialMedia/insta.png',
       link: 'https://instagram.com/iskcondhanbadofficial',
-      embeds: Array(24).fill(
-        `<iframe src="https://www.instagram.com/p/C8PSTF6RnF9/embed" width="100%" height="400" frameborder="0" allowfullscreen></iframe>`
-      ),
+      label: 'Page',
     },
-     facebook: {
-    img: '/SocialMedia/face.png',
-    link: 'https://www.facebook.com/iskcondhanbadofficial',
-    embeds: [
-      `<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fiskcondhanbadofficial%2Fvideos%2F1750356969050616%2F&show_text=true&width=560&t=0" width="560" height="429" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>`,
-      `<iframe src="https://www.facebook.com/plugins/post.php?href=https://www.facebook.com/iskcondhanbadofficial/posts/849196140200274&width=500" width="100%" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen></iframe>`,
-    ],
-  },
+    facebook: {
+      img: '/SocialMedia/face.png',
+      link: 'https://www.facebook.com/iskcondhanbadofficial',
+      label: 'Page',
+    },
     youtube: {
       img: '/SocialMedia/yt.png',
       link: 'https://youtube.com/@iskcondhanbad',
-      embeds: [
-        // Replace these video IDs with actual recent ones
-        "https://www.youtube.com/embed/z_KvKshWfbQ",
-        "https://www.youtube.com/embed/TLwWnVEqcsc",
-        "https://www.youtube.com/embed/EWEyVE21MTo",
-        "https://www.youtube.com/embed/EWEyVE21MTo",
-        "https://www.youtube.com/embed/EWEyVE21MTo",
-        "https://www.youtube.com/embed/EWEyVE21MTo",
-        "https://www.youtube.com/embed/EWEyVE21MTo",
-        "https://www.youtube.com/embed/EWEyVE21MTo",
-        "https://www.youtube.com/embed/EWEyVE21MTo",
-        "https://www.youtube.com/embed/EWEyVE21MTo",
-        
-      ],
+      label: 'Channel',
     },
   };
 
-const [content ,setContent]=useState(hardCodedContent);
-
-
-
   return (
-    <div className="relative my-10 md:my-20 py-16 px-6 md:px-20 bg-orange-100 bg-cover bg-center text-center overflow-hidden">
-      {/* Background Logo Tiling */}
+    <div className="relative my-10 md:my-20 py-16 px-6 md:px-20 bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl shadow-xl overflow-hidden">
+      {/* Background pattern */}
       <div
         className="absolute inset-0 opacity-10 z-0"
         style={{
@@ -55,23 +33,23 @@ const [content ,setContent]=useState(hardCodedContent);
         }}
       ></div>
 
-      {/* Foreground Content */}
+      {/* Foreground */}
       <div className="relative z-10">
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold text-[#ff6d05] drop-shadow-lg mb-10">
-          SOCIAL MEDIA
+        <h2 className="text-4xl md:text-5xl font-extrabold text-[#ff6d05] mb-12 text-center tracking-wide drop-shadow-sm">
+          Follow Us on Social Media
         </h2>
 
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-6 mb-10">
-          {['instagram', 'facebook', 'youtube'].map((platform) => (
+        <div className="flex flex-wrap justify-center gap-6 mb-12">
+          {Object.keys(socialLinks).map((platform) => (
             <button
               key={platform}
               onClick={() => setActiveTab(platform)}
-              className={`flex items-center gap-3 px-6 py-3 rounded-md shadow-md transition-transform font-bold text-lg ${
+              className={`flex items-center gap-3 px-6 py-3 rounded-full shadow-md transition-all font-semibold text-lg border ${
                 activeTab === platform
-                  ? 'scale-105 bg-gradient-to-r from-yellow-400 to-orange-500 text-white'
-                  : 'bg-white text-black'
+                  ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-white scale-105 border-transparent shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 border-gray-300'
               }`}
             >
               <img
@@ -83,49 +61,32 @@ const [content ,setContent]=useState(hardCodedContent);
                     : '/logo/youtube-logo.png'
                 }
                 alt={platform}
-                className="w-5 h-5"
+                className="w-6 h-6"
               />
-              {platform.toUpperCase()}
+              {platform.charAt(0).toUpperCase() + platform.slice(1)}
             </button>
           ))}
         </div>
 
-        {/* Preview Image */}
-        <div className="flex justify-center items-center mb-10">
+        {/* Preview Card */}
+        <div className="flex justify-center">
           <a
-            href={content[activeTab].link}
+            href={socialLinks[activeTab].link}
             target="_blank"
             rel="noopener noreferrer"
-            className="max-w-full h-[450px] overflow-y-auto rounded-lg shadow-md"
+            className="block w-full max-w-2xl rounded-2xl overflow-hidden shadow-lg transform hover:scale-[1.03] hover:shadow-2xl transition duration-300 bg-white"
           >
             <img
-              src={content[activeTab].img}
+              src={socialLinks[activeTab].img}
               alt={`${activeTab} preview`}
-              className="w-full object-cover rounded-md"
+              className="w-full h-[400px] object-contain bg-white p-4 rounded-t-2xl"
             />
+            <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-lg font-semibold py-4 text-center">
+              Visit our{' '}
+              {activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}{' '}
+              {socialLinks[activeTab].label}
+            </div>
           </a>
-        </div>
-
-        {/* Embed Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-h-[500px] overflow-y-scroll px-3 py-6 border-4 border-yellow-400 rounded-lg bg-white shadow-inner">
-          {content[activeTab].embeds.map((embed, idx) =>
-            activeTab === 'youtube' ? (
-              <iframe
-                key={idx}
-                src={embed}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-[250px] rounded-md shadow-md"
-              ></iframe>
-            ) : (
-              <div
-                key={idx}
-                className="w-full h-[400px] rounded overflow-hidden shadow-md"
-                dangerouslySetInnerHTML={{ __html: embed }}
-              ></div>
-            )
-          )}
         </div>
       </div>
     </div>

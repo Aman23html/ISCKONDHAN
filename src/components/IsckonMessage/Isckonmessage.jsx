@@ -33,12 +33,12 @@ const Isckonmessage = () => {
       </div>
 
       {/* 💠 Mandala + Image */}
-      <div className="w-full max-w-[250px] relative flex justify-center items-center aspect-square">
-        <img src="/border/dra.svg" alt="mandala" className="absolute w-[100%] max-w-none spin-slow" />
+      <div className="w-full max-w-[250px] relative flex  justify-center items-center aspect-square">
+        <img src="/border/dra.svg" alt="mandala" className="absolute w-[100%] max-w-none spin-slow mb-10" />
         <img
           src="/Prabhupada/prabhupada.png"
           alt="Srila Prabhupada"
-          className="relative z-10 w-[90%] mt-4 object-contain drop-shadow-xl rounded-b-4xl"
+          className="relative z-10 w-[90%] mb-15 object-contain drop-shadow-xl rounded-b-4xl"
         />
       </div>
 

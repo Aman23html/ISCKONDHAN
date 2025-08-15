@@ -2,6 +2,7 @@ import './118'; // 👈 import here
 import React from 'react';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 
 // Page components
 import About from './pages/About';
@@ -46,6 +47,7 @@ import DonationForm from './components/DonationForm';
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <HeroTop />
       <Hero />
 
