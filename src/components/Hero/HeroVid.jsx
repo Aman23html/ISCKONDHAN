@@ -56,7 +56,7 @@ const HeroVid = () => {
           {/* Stat 1 */}
           <div className="flex flex-col items-center text-center w-full sm:w-1/3">
             <div className="text-lg sm:text-[32px] font-semibold text-[#fea567ad]">
-              <CountUp end={73} duration={2} separator="," suffix="+" />
+              <CountUp end={73} duration={2} separator="," suffix="k+" />
             </div>
             <div className="text-[#545252] text-xs sm:text-sm leading-tight">
               {t('stat1')}
@@ -66,7 +66,7 @@ const HeroVid = () => {
           {/* Stat 2 */}
           <div className="flex flex-col items-center text-center w-full sm:w-1/3">
             <div className="text-lg sm:text-[32px] font-semibold text-[#fea567ad]">
-              <CountUp end={70} duration={2} />
+              <CountUp end={70} duration={2} suffix="k"/>
             </div>
             <div className="text-[#545252] text-xs sm:text-sm leading-tight">
               {t('stat2')}

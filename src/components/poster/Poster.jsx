@@ -10,61 +10,62 @@ const Poster = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto-slide every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [images.length]);
 
-  const nextSlide = () => {
+  const nextSlide = () =>
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      (prevIndex - 1 + images.length) % images.length
-    );
-  };
+  const prevSlide = () =>
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
 
   return (
-    <div className=" relative w-full bg-white pb-12 sm:pb-12 lg:pb-25 flex flex-col items-center">
+    <div className="relative w-full bg-white pb-12 sm:pb-12 lg:pb-25 flex flex-col items-center">
       {/* Heading */}
       <h2 className="text-3xl sm:text-4xl font-bold text-[#df7326] mb-6 text-center">
         Announcements
       </h2>
 
-      {/* Slider Container */}
-      <div className="relative w-full max-w-[1680px] h-auto  rounded-xl overflow-hidden shadow-xl">
-        {/* Image */}
+      {/* Slider (aspect ratio matches your banner ~1280x486) */}
+      <div
+        className="relative w-full max-w-[1680px] rounded-xl overflow-hidden shadow-xl bg-white"
+        style={{ aspectRatio: '1280 / 486' }} // keeps full image visible
+      >
+        {/* Image fills the aspect box without cropping */}
         <img
           src={images[currentIndex].src}
           alt={images[currentIndex].alt}
-          className="w-full h-[250px] sm:h-[450px] md:h-[500px] object-cover transition-all duration-700 ease-in-out rounded-xl"
+          className="absolute inset-0 w-full h-full object-contain bg-white transition-opacity duration-500"
         />
 
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-black p-2 rounded-full shadow-md transition"
+          aria-label="Previous slide"
+          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black p-1.5 sm:p-2 rounded-full shadow-md transition"
         >
           ❮
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-black p-2 rounded-full shadow-md transition"
+          aria-label="Next slide"
+          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black p-1.5 sm:p-2 rounded-full shadow-md transition"
         >
           ❯
         </button>
 
         {/* Dots */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
           {images.map((_, idx) => (
-            <div
+            <button
               key={idx}
-              className={`w-3 h-3 rounded-full ${
+              onClick={() => setCurrentIndex(idx)}
+              aria-label={`Go to slide ${idx + 1}`}
+              className={`w-2.5 h-2.5 rounded-full transition ${
                 idx === currentIndex ? 'bg-[#df7326]' : 'bg-gray-300'
               }`}
             />
@@ -72,15 +73,12 @@ const Poster = () => {
         </div>
       </div>
 
-
+      {/* Decorative border */}
       <img
         src="/border/border.png"
         alt="bottom-border"
-        className="relative  left-0 w-full "
+        className="relative left-0 w-full mt-4"
       />
-
-
-
     </div>
   );
 };
