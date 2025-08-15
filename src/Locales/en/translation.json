@@ -24,31 +24,31 @@
   "seva": {
     "templeConstruction": {
       "title": "Temple Construction",
-      "desc": "Contribute to the ISKCON Temple Construction Seva, help build a facility to provide meals to thousands of devotees."
+      "desc": ""
     },
     "annaDaan": {
       "title": "Anna Daan",
-      "desc": "Help us feed the needy through this blessed seva."
+      "desc": ""
     },
     "gitaDaan": {
       "title": "Gita Daan",
-      "desc": "Distribute the divine knowledge of Bhagavad Gita."
+      "desc": ""
     },
     "tribalCare": {
       "title": "Tribal Care Seva",
-      "desc": "Support spiritual outreach and essentials in tribal areas."
+      "desc": ""
     },
     "vaishnavaSeva": {
       "title": "Vaishnava Seva",
-      "desc": "Serve the devotees through prasadam and essentials."
+      "desc": ""
     },
     "nityaSeva": {
       "title": "Nitya Seva",
-      "desc": "Support the daily rituals and offerings to the Deities."
+      "desc": ""
     },
     "festivalSupport": {
       "title": "Festival Donation",
-      "desc": "Contribute to the grand celebrations of ISKCON festivals."
+      "desc": ""
     }
   },
 

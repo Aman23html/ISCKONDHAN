@@ -37,7 +37,7 @@ const Broadcast = () => {
 
         {/* Title */}
         <h2 className="text-2xl sm:text-3xl font-bold z-10 mb-6 font-inknut text-white">
-          TEMPLE SCHEDULE
+          {t('templeSchedule')}
         </h2>
 
         {/* Schedule */}
