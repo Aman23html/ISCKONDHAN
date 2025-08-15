@@ -5,7 +5,7 @@ import config from "../config.json";
 const DonationForm = () => {
   const { state } = useLocation();
   console.log(state.amount);
-  state.amount=1
+  // state.amount=1
   const [formData, setFormData] = useState({
     name: "",
     pan: "",

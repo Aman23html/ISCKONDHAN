@@ -8,12 +8,13 @@ const Donation = () => {
   const [activeOverlay, setActiveOverlay] = useState(null);
 
   const sevaItems = [
-    { slug: 'temple-construction', title: t('seva.templeConstruction.title'), desc: t('seva.templeConstruction.desc'), image: '/Donation/donation1.png' },
-    { slug: 'anna-daan', title: t('seva.annaDaan.title'), desc: t('seva.annaDaan.desc'), image: '/Donation/donation2.png' },
-    { slug: 'gita-daan', title: t('seva.gitaDaan.title'), desc: t('seva.gitaDaan.desc'), image: '/Donation/donation3.png' },
-    { slug: 'tribal-care', title: t('seva.tribalCare.title'), desc: t('seva.tribalCare.desc'), image: '/Donation/donation4.png' },
-    { slug: 'vaishnava-seva', title: t('seva.vaishnavaSeva.title'), desc: t('seva.vaishnavaSeva.desc'), image: '/Donation/donation5.png' },
-    { slug: 'nitya-seva', title: t('seva.nityaSeva.title'), desc: t('seva.nityaSeva.desc'), image: '/Donation/donation6.png' },
+    { slug: 'Temple Construction', title: t('seva.templeConstruction.title'), desc: t('seva.templeConstruction.desc'), image: '/Donation/donation1.png' },
+    { slug: 'Anna Daan', title: t('seva.annaDaan.title'), desc: t('seva.annaDaan.desc'), image: '/Donation/donation2.png' },
+    { slug: 'Gita Daan', title: t('seva.gitaDaan.title'), desc: t('seva.gitaDaan.desc'), image: '/Donation/donation3.png' },
+    { slug: 'Tribal Care', title: t('seva.tribalCare.title'), desc: t('seva.tribalCare.desc'), image: '/Donation/donation4.png' },
+    { slug: 'Vaishnava Seva', title: t('seva.vaishnavaSeva.title'), desc: t('seva.vaishnavaSeva.desc'), image: '/Donation/donation5.png' },
+    { slug: 'Nitya Seva', title: t('seva.nityaSeva.title'), desc: t('seva.nityaSeva.desc'), image: '/Donation/donation6.png' },
+    { slug: 'festival-support', title: t('seva.festivalSupport.title'), desc: t('seva.festivalSupport.desc'), image: '/Donation/donation7.png' },
   ];
 
   const donationOptions = [
@@ -28,7 +29,7 @@ const Donation = () => {
 
   const handlePaymentRedirect = (slug, amount) => {
     setActiveOverlay(null);
-    navigate(`/donate/payment/${slug}/${amount}`);
+    navigate(`/donate/payment/${encodeURIComponent(slug)}/${amount}`);
   };
 
   return (

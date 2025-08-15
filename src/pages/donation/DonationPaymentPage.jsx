@@ -11,6 +11,7 @@ const sevaImageMap = {
   'Nitya Seva': '/Donation/donation6.png',
   'Janmashtami':'/gallery/janm1.png',
   'Rath Yatra': '/gallery/rath1.webp',
+  'festival-support': '/Donation/donation7.png',
 };
 
 const DonationPaymentPage = () => {

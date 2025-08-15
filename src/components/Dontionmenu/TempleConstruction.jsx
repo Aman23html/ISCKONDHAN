@@ -18,7 +18,7 @@ const TempleConstruction = () => {
   return (
     
     <div className="bg-gradient-to-br from-yellow-50 via-amber-100 to-yellow-50 shadow-2xl rounded-3xl p-8 max-w-6xl mx-auto mt-12 mb-16 border border-amber-300">
-      <h2 className="text-5xl font-extrabold text-center text-amber-700 mb-6">
+      <h2 className="sm:text-5xl font-extrabold text-center text-amber-700 mb-6">
         {t('templeConstruction.title')}
       </h2>
 
@@ -37,7 +37,7 @@ const TempleConstruction = () => {
       {/* Description */}
       <div className="text-lg text-gray-800 mt-10 leading-relaxed font-medium">
         <p className="mb-5 text-center">
-          {t('templeConstruction.description')}
+          {t('templeConstruction.intro')}
         </p>
 
         <p className="mb-4">

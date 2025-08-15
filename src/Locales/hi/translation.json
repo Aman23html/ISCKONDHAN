@@ -16,7 +16,7 @@
     "DarshanAarti": "दर्शन आरती",
     "GuruPuja": "गुरु पूजा",
     "BhagwatamClass": "श्रीमद् भागवत कथा ",
-    "TempleCloses": "पठ बंद होता है",
+    "TempleCloses": "दर्शन बंद ",
     "Darshan": "पुनः दर्शन",
     "SandhyaAarti": "संध्या आरती",
     "TempleClose": "पठ बंद",
@@ -147,7 +147,7 @@
     "description": "सेवा, शिक्षा और भोजन के माध्यम से आदिवासी समुदायों को उठाएं।"
   },
   "festivalSupport": {
-    "title": "त्योहार समर्थन",
+    "title": "त्योहार दान",
     "description": "भव्य आध्यात्मिक त्योहारों और यात्राओं में योगदान करें।"
   }
 },

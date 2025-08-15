@@ -3,8 +3,8 @@
   "subtitle": "Where Devotion Meets Enlightenment",
   "paragraph": "The movement was brought to the western world in 1965 by His Divine Grace A.C. Bhaktivedanta Swami Prabhupada, known lovingly by the followers of the movement as ‘Srila Prabhupada’. He wrote over sixty volumes of authoritative translations, commentaries and summary studies of the philosophical and religious classics of India.\n\n Thus, today Srila Prabhupada is recognised as one of India’s greatest spiritual ambassadors of the 20th Century.",
   "readMore": "READ MORE",
-  "welcomeTo": "WELCOME TO",
-  "templeName": "Iskcon Dhanbad",
+  "welcomeTo": "HARER KRISHNA",
+  "templeName": "Welcome To Iskcon Dhanbad",
   "locationTag": "Temple | Jagjivan Nagar, Dhanbad",
   "location": "Location",
   "stat1": "MEAL SERVED PER YEAR",
@@ -45,6 +45,10 @@
     "nityaSeva": {
       "title": "Nitya Seva",
       "desc": "Support the daily rituals and offerings to the Deities."
+    },
+    "festivalSupport": {
+      "title": "Festival Donation",
+      "desc": "Contribute to the grand celebrations of ISKCON festivals."
     }
   },
 
@@ -151,7 +155,7 @@
     "description": "Uplift tribal communities through seva, education, and food."
   },
   "festivalSupport": {
-    "title": "Festival Support",
+    "title": "Festival Donation",
     "description": "Contribute towards grand spiritual festivals and yatras."
   }
 },
@@ -217,7 +221,7 @@
     "iskconTitle": "ISKCON DHANBAD",
     "location": "JAGJIVAN NAGAR, DHANBAD",
     "address": "Bunglow no 23, Old Doctor’s colony, in front of BJP Office (Raj Sinha), Near Central Hospital, Nutandih, Jagjivan Nagar, Dhanbad, Jharkhand - 826003",
-    "phone": "+91 98765 43210",
+    "phone": "+91 95702 76337 , +91 99030 13399",
     "email": "iskcondhanbad@gmail.com",
     "quickLinks": "QUICK LINKS",
     "about": "About Us",

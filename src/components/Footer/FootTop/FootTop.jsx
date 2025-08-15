@@ -1,14 +1,20 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaInstagram, FaFacebookF, FaYoutube, FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
 
 const FootTop = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
   const scrollToPoster = (e) => {
     e.preventDefault();
     const section = document.getElementById('poster');
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // If not on homepage, navigate and scroll after render
+      navigate('/', { state: { scrollTo: 'poster' } });
     }
   };
 
@@ -36,10 +42,10 @@ const FootTop = () => {
           </p>
           <div className="space-y-1">
             <p className="flex items-center gap-2 text-white text-sm">
-              <FaPhoneAlt className="text-yellow-300" /> {t('footer.phone')} +91 98765 43210
+              <FaPhoneAlt className="text-yellow-300" /> {t('footer.phone')} 
             </p>
             <p className="flex items-center gap-2 text-white text-sm">
-              <FaEnvelope className="text-yellow-300" /> {t('footer.email')} iskcondhanbad@gmail.com
+              <FaEnvelope className="text-yellow-300" /> {t('footer.email')} 
             </p>
           </div>
         </div>
@@ -48,14 +54,20 @@ const FootTop = () => {
         <div className="space-y-3">
           <h3 className="text-xl font-bold text-[#fdbe51]">QUICK LINKS</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="/about" className="hover:underline">About Us</a></li>
             <li>
-              <a href="#poster-section" onClick={scrollToPoster} className="hover:underline">
-                Upcoming Events
-              </a>
+              <Link to="/about" className="hover:underline">About Us</Link>
             </li>
-            <li><a href="/gallery" className="hover:underline">Gallery</a></li>
-            <li><a href="/contact" className="hover:underline">Contact Us</a></li>
+            <li>
+              <Link to="/" onClick={scrollToPoster} className="hover:underline">
+                Upcoming Events
+              </Link>
+            </li>
+            <li>
+              <Link to="/gallery" className="hover:underline">Gallery</Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:underline">Contact Us</Link>
+            </li>
           </ul>
         </div>
 
@@ -86,12 +98,12 @@ const FootTop = () => {
               <FaYoutube />
             </a>
           </div>
-          <a
-            href="/donate"
+          <Link
+            to="/donate"
             className="inline-block px-6 py-3 text-sm font-semibold text-[#ff6b00] bg-white rounded-full shadow-lg hover:bg-yellow-300 hover:scale-105 transition-all"
           >
             Donate
-          </a>
+          </Link>
         </div>
       </div>
 

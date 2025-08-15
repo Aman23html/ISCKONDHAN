@@ -20,6 +20,13 @@ const DonationLayout = () => {
 
   const donationOptions = [
     {
+      name: t('donate.festivalSupport.title'),
+      description: t('donate.festivalSupport.description'),
+      icon: <GiReceiveMoney className="text-4xl text-amber-600" />,
+      link: 'festival-support'
+    },
+
+    {
       name: t('donate.templeConstruction.title'),
       description: t('donate.templeConstruction.description'),
       icon: <GiTempleGate className="text-4xl text-amber-600" />,
@@ -54,13 +61,8 @@ const DonationLayout = () => {
       description: t('donate.tribalCare.description'),
       icon: <GiTribalMask className="text-4xl text-amber-600" />,
       link: 'tribal-care-seva'
-    },
-    {
-      name: t('donate.festivalSupport.title'),
-      description: t('donate.festivalSupport.description'),
-      icon: <GiReceiveMoney className="text-4xl text-amber-600" />,
-      link: 'festival-support'
     }
+    
   ];
 
   return (
