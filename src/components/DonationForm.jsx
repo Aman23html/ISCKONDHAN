@@ -4,7 +4,8 @@ import { useLocation } from 'react-router-dom';
 import config from "../config.json"; 
 const DonationForm = () => {
   const { state } = useLocation();
-  console.log(state.amount)
+  console.log(state.amount);
+  state.amount=1
   const [formData, setFormData] = useState({
     name: "",
     pan: "",
@@ -17,49 +18,71 @@ const DonationForm = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+  
   const handleDonate = async (e) => {
-e.preventDefault()
+    e.preventDefault();
     try {
-        // Create order on backend
-        const orderRes = await fetch("http://localhost:5000/create-order", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ amount: state.amount })
-        });
-
-        const orderData = await orderRes.json();
-
-        const options = {
-          key: config.RAZORPAY_KEY_ID,
-          amount: state.amount*100,
-          currency: "INR",
-          name: "ISKCON Dhanbad",
-          description: "Donation ",
-          order_id: orderData.id,
-          handler: function (response) {
-            fetch("/api/payment-verify", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(response)
+      console.log("[Frontend] Starting donation process...");
+  
+      // 1. Create Order
+      const orderRes = await fetch(`${config.BACKEND.BASE_URL}/create-order`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ amount: state.amount })
+      });
+  
+      if (!orderRes.ok) {
+        const errorData = await orderRes.json();
+        throw new Error(errorData.error || "Order creation failed");
+      }
+  
+      const orderData = await orderRes.json();
+      console.log("[Frontend] Order created:", orderData.id);
+  
+      // 2. Razorpay Checkout
+      const options = {
+        key: config.RAZORPAY_KEY_ID, // Using configured key
+        amount: orderData.amount,
+        currency: "INR",
+        name: "ISKCON Dhanbad",
+        description: "Donation",
+        order_id: orderData.id,
+        handler: function (response) {
+          console.log("[Frontend] Payment successful! Response:", response);
+          
+          // Using configured backend URL
+          fetch(`${config.BACKEND.BASE_URL}/payment-status?paymentId=${response.razorpay_payment_id}`)
+            .then(res => res.json())
+            .then(data => {
+              console.log(`[Frontend] Final payment status: ${data.status}`);
+              alert(`Thank you! Payment ${data.status.toUpperCase()} successfully.`);
+            })
+            .catch(err => {
+              console.error("[Frontend] Status check failed:", err);
+              alert("Payment completed! Status verification pending.");
             });
-          },
-          prefill:formData,
-          notes: formData,
-          theme: {
-            color: "#3399cc"
-          }
-        };
-
-        const rzp = new window.Razorpay(options);
-        rzp.open();
+        },
+        prefill: formData,
+        notes: formData,
+        theme: { color: "#3399cc" }
+      };
+  
+      const rzp = new window.Razorpay(options);
+      
+      rzp.on("payment.failed", function (response) {
+        console.error("[Frontend] Payment failed:", response.error);
+        alert(`Payment failed: ${response.error.description}`);
+      });
+  
+      rzp.open();
+      
     } catch (err) {
-        console.error(err);
+      console.error("[Frontend] Donation error:", err.message || err);
+      alert(`Error: ${err.message}`);
     }
-};
-
+  };
+  
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
