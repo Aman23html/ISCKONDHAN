@@ -16,12 +16,12 @@ const festivals = [
     descriptionKey: 'festivalSupport.janmashtami.description',
     donationOptions: [101, 551, 1100, 2500, 5100],
   },
-  {
-    nameKey: 'festivalSupport.radhaAshtami.title',
-    image: '/Festival/radha-ashtami.jpg',
-    descriptionKey: 'festivalSupport.radhaAshtami.description',
-    donationOptions: [101, 251, 551, 1100, 2100],
-  },
+  // {
+  //   nameKey: 'festivalSupport.radhaAshtami.title',
+  //   image: '/Festival/radha-ashtami.jpg',
+  //   descriptionKey: 'festivalSupport.radhaAshtami.description',
+  //   donationOptions: [101, 251, 551, 1100, 2100],
+  // },
 ];
 
 const FestivalSupport = () => {

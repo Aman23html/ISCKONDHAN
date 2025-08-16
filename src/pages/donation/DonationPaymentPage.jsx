@@ -5,20 +5,32 @@ import { ChevronLeft } from 'lucide-react';
 const sevaImageMap = {
   'Temple Construction': '/Donation/donation1.png',
   'temple-construction': '/Donation/donation1.png',
+
   'Anna Daan': '/Donation/donation2.png',
   'anna-daan': '/Donation/donation2.png',
+
   'Gita Daan': '/Donation/donation3.png',
   'gita-daan': '/Donation/donation3.png',
+
   'Tribal Care': '/Donation/donation4.png',
   'tribal-care-seva': '/Donation/donation4.png',
+
   'Vaishnava Seva': '/Donation/donation5.png',
   'vaishnava-seva': '/Donation/donation5.png',
+
   'Nitya Seva': '/Donation/donation6.png',
   'nitya-seva': '/Donation/donation6.png',
+
+  // 🔥 FIXED KEYS
   'Janmashtami': '/gallery/janm1.png',
+  'janmashtami': '/gallery/janm1.png',
+
   'Rath Yatra': '/gallery/rath1.webp',
+  'rath-yatra': '/gallery/rath1.webp',
+
   'festival-support': '/Donation/donation7.png',
 };
+
 
 const DonationPaymentPage = () => {
   const { sevaName, amount } = useParams();
