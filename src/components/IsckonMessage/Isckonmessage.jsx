@@ -21,9 +21,9 @@ const Isckonmessage = () => {
         <p className="text-base text-black leading-relaxed" style={{ whiteSpace: 'pre-line' }}>
           {t('paragraph')}
         </p>
-        <button className="bg-[#df7326] text-white text-lg font-medium px-5 py-2.5 rounded hover:bg-[#c75b18] transition-all">
+        {/* <button className="bg-[#df7326] text-white text-lg font-medium px-5 py-2.5 rounded hover:bg-[#c75b18] transition-all">
           {t('readMore')}
-        </button>
+        </button> */}
         <button
           onClick={toggleLanguage}
           className="mt-3 text-sm text-blue-600 underline hover:text-blue-800"

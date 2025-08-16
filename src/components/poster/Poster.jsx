@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Poster = () => {
+  const {t} = useTranslation();
   const images = [
     { src: '/posterimg/poster1.png', alt: 'Deity Darshan 1' },
     { src: '/posterimg/poster2.png', alt: 'Deity Darshan 2' },
@@ -27,7 +29,7 @@ const Poster = () => {
     <div className="relative w-full bg-white pb-12 sm:pb-12 lg:pb-25 flex flex-col items-center">
       {/* Heading */}
       <h2 className="text-3xl sm:text-4xl font-bold text-[#df7326] mb-6 text-center">
-        Announcements
+        {t("poster.heading")}
       </h2>
 
       {/* Slider (aspect ratio matches your banner ~1280x486) */}

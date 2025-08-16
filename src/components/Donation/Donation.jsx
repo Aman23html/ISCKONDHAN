@@ -11,7 +11,7 @@ const Donation = () => {
     { slug: 'temple-construction', title: t('seva.templeConstruction.title'), desc: t('seva.templeConstruction.desc'), image: '/Donation/donation1.png' },
     { slug: 'anna-daan', title: t('seva.annaDaan.title'), desc: t('seva.annaDaan.desc'), image: '/Donation/donation2.png' },
     { slug: 'gita-daan', title: t('seva.gitaDaan.title'), desc: t('seva.gitaDaan.desc'), image: '/Donation/donation3.png' },
-    { slug: 'tribal-care', title: t('seva.tribalCare.title'), desc: t('seva.tribalCare.desc'), image: '/Donation/donation4.png' },
+    { slug: 'tribal-care-seva', title: t('seva.tribalCare.title'), desc: t('seva.tribalCare.desc'), image: '/Donation/donation4.png' },
     { slug: 'vaishnava-seva', title: t('seva.vaishnavaSeva.title'), desc: t('seva.vaishnavaSeva.desc'), image: '/Donation/donation5.png' },
     { slug: 'nitya-seva', title: t('seva.nityaSeva.title'), desc: t('seva.nityaSeva.desc'), image: '/Donation/donation6.png' },
     { slug: 'festival-support', title: t('seva.festivalSupport.title'), desc: t('seva.festivalSupport.desc'), image: '/Donation/donation7.png' },
@@ -42,9 +42,9 @@ const Donation = () => {
         </div>
         <div className="relative flex items-center justify-center px-4 py-4 min-h-[100px]">
           <div className="absolute h-[200px] w-[200px] bg-orange-200 blur-3xl z-[0] rounded-[50%]" />
-          <img src="/border/dra2.svg" alt="mandala-center" className="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] object-contain z-0" />
+          <img src="/border/dra2.svg" alt="mandala-center" className="absolute w-[200px] h-[300px] md:w-[400px] md:h-[400px] object-contain z-0" />
           <h2 className="text-[#df7326] text-3xl md:text-5xl font-extrabold text-center z-10 drop-shadow-lg">
-            DONATION
+            {t("seva.heading")}
           </h2>
         </div>
         <div className="relative w-[600px] h-[150px] md:w-[250px] md:h-[250px]">
@@ -80,7 +80,7 @@ const Donation = () => {
                 onClick={() => setActiveOverlay(activeOverlay === idx ? null : idx)}
                 className="w-full bg-gradient-to-r from-[#df7326] to-[#c65a1f] text-white px-4 py-2 rounded-lg font-semibold hover:from-[#c65a1f] hover:to-[#a84516] shadow-md hover:shadow-xl transition-all"
               >
-                SELECT SEVA
+                {t("seva.selectseva")}
               </button>
 
               {/* Amount Overlay */}

@@ -22,6 +22,7 @@
   "TempleClose": "Temple Close",
 
   "seva": {
+    "heading":"Donation",
     "templeConstruction": {
       "title": "Temple Construction",
       "desc": ""
@@ -49,7 +50,8 @@
     "festivalSupport": {
       "title": "Festival Donation",
       "desc": ""
-    }
+    },
+    "selectseva":"SELECT SEVA"
   },
 
   "courses": {
@@ -236,8 +238,45 @@
     "follow": "FOLLOW US :",
     "donate": "Donate",
     "quote": "\"Chant Hare Krishna and be happy\" — Srila Prabhupada"
+  },
+  "socialMedia": {
+    "heading": "Follow Us on Social Media",
+    "platforms": {
+      "instagram": {
+        "name": "Instagram",
+        "label": "Page"
+      },
+      "facebook": {
+        "name": "Facebook",
+        "label": "Page"
+      },
+      "youtube": {
+        "name": "YouTube",
+        "label": "Channel"
+      }
+    },
+    "visit": "Visit our {{platform}} {{label}}"
+  },
+  "leaders": {
+    "sectionTitle": "Our Leaders",
+    "list": [
+      {
+        "name": "Naamprem Das",
+        "role": "President"
+      },
+      {
+        "name": "Damodar Govind Das",
+        "role": "Vice President"
+      }
+    ]
+  },
+  "visitors":{
+    "heading":"Visitors",
+    "title":""
+  },
+  "poster":{
+    "heading":"Announcements"
   }
-  
 }
 
 

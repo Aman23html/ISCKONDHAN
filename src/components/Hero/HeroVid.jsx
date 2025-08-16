@@ -50,9 +50,9 @@ const HeroVid = () => {
       </div>
 
       {/* 📊 Stats Block Overlay at Bottom */}
-      <div className="absolute bottom-2 w-full px-2 flex justify-center">
+      <div className="absolute bottom-2 w-full px-2 flex flex-col items-center gap-3">
         <div className="bg-white/90 backdrop-blur border-[2px] border-[#ff9640c7] rounded-md px-4 py-3 sm:px-8 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-8 max-w-5xl w-full shadow-md">
-
+          
           {/* Stat 1 */}
           <div className="flex flex-col items-center text-center w-full sm:w-1/3">
             <div className="text-lg sm:text-[32px] font-semibold text-[#fea567ad]">
@@ -82,8 +82,9 @@ const HeroVid = () => {
               {t('stat3')}
             </div>
           </div>
-
         </div>
+
+        
       </div>
     </div>
   );

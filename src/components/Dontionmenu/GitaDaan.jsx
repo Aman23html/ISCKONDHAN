@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { HandHeart } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const donationOptions = [
   { amount: 280, description: "1 Bhagavad Gita" },
@@ -15,6 +16,7 @@ const donationOptions = [
 const sevaName = "Gita Daan";
 
 const GitaDaan = () => {
+  const {t} = useTranslation();
   const navigate = useNavigate();
 
   const handleDonationClick = (amount) => {

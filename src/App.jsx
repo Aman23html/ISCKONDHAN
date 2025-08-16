@@ -3,6 +3,7 @@ import React from 'react';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
+import FloatingIcons from './components/FloatingIcons';
 
 // Page components
 import About from './pages/About';
@@ -42,11 +43,15 @@ import YouthCourse from './components/CoursesOffer/YouthCourse';
 import GitaClasses from './components/CoursesOffer/GitaClasses';
 import SundayFeast from './components/CoursesOffer/SundayFeast';
 import DonationForm from './components/DonationForm';
+import ImageContentSection from './components/ImageSection';
+
+import VisitorCounter from './components/visited';
 
 
 const App = () => {
   return (
     <Router>
+      <FloatingIcons />
       <ScrollToTop />
       <HeroTop />
       <Hero />
@@ -58,6 +63,7 @@ const App = () => {
           element={
             <>
               <HeroVid />
+              <VisitorCounter/>
               <Broadcast />
               <Isckonmessage />
               <Poster />
@@ -66,6 +72,7 @@ const App = () => {
               <BannerTwo />
               <Courses />
               <SocialMedia />
+              <ImageContentSection/>
             </>
           }
         />

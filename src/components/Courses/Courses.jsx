@@ -39,7 +39,7 @@ const Courses = () => {
         viewport={{ once: true }}
         className="text-center text-3xl sm:text-4xl md:text-5xl font-bold text-[#df7326] mb-12 font-serif drop-shadow-sm"
       >
-        Courses We Offer
+        {t("courses.heading")}
       </motion.h2>
 
       {/* Course Cards */}

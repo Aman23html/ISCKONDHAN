@@ -1,23 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const SocialMedia = () => {
-  const [activeTab, setActiveTab] = useState('instagram');
+  const { t } = useTranslation();
+  const [activeTab, setActiveTab] = useState("instagram");
 
   const socialLinks = {
     instagram: {
-      img: '/SocialMedia/insta.png',
-      link: 'https://instagram.com/iskcondhanbadofficial',
-      label: 'Page',
+      img: "/SocialMedia/insta.png",
+      link: "https://instagram.com/iskcondhanbadofficial",
+      label: t("socialMedia.platforms.instagram.label"),
+      name: t("socialMedia.platforms.instagram.name"),
     },
     facebook: {
-      img: '/SocialMedia/face.png',
-      link: 'https://www.facebook.com/iskcondhanbadofficial',
-      label: 'Page',
+      img: "/SocialMedia/face.png",
+      link: "https://www.facebook.com/iskcondhanbadofficial",
+      label: t("socialMedia.platforms.facebook.label"),
+      name: t("socialMedia.platforms.facebook.name"),
     },
     youtube: {
-      img: '/SocialMedia/yt.png',
-      link: 'https://youtube.com/@iskcondhanbad',
-      label: 'Channel',
+      img: "/SocialMedia/yt.png",
+      link: "https://youtube.com/@iskcondhanbad",
+      label: t("socialMedia.platforms.youtube.label"),
+      name: t("socialMedia.platforms.youtube.name"),
     },
   };
 
@@ -27,9 +32,10 @@ const SocialMedia = () => {
       <div
         className="absolute inset-0 opacity-10 z-0"
         style={{
-          backgroundImage: "url('https://c.animaapp.com/md8w42lwOfBxGO/img/frame-180.png')",
-          backgroundRepeat: 'repeat',
-          backgroundSize: '180px',
+          backgroundImage:
+            "url('https://c.animaapp.com/md8w42lwOfBxGO/img/frame-180.png')",
+          backgroundRepeat: "repeat",
+          backgroundSize: "180px",
         }}
       ></div>
 
@@ -37,7 +43,7 @@ const SocialMedia = () => {
       <div className="relative z-10">
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-extrabold text-[#ff6d05] mb-12 text-center tracking-wide drop-shadow-sm">
-          Follow Us on Social Media
+          {t("socialMedia.heading")}
         </h2>
 
         {/* Tabs */}
@@ -48,22 +54,22 @@ const SocialMedia = () => {
               onClick={() => setActiveTab(platform)}
               className={`flex items-center gap-3 px-6 py-3 rounded-full shadow-md transition-all font-semibold text-lg border ${
                 activeTab === platform
-                  ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-white scale-105 border-transparent shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 border-gray-300'
+                  ? "bg-gradient-to-r from-yellow-400 to-orange-500 text-white scale-105 border-transparent shadow-lg"
+                  : "bg-white text-gray-700 hover:bg-gray-100 border-gray-300"
               }`}
             >
               <img
                 src={
-                  platform === 'instagram'
-                    ? '/logo/instagram-logo.png'
-                    : platform === 'facebook'
-                    ? '/logo/facebook-logo.png'
-                    : '/logo/youtube-logo.png'
+                  platform === "instagram"
+                    ? "/logo/instagram-logo.png"
+                    : platform === "facebook"
+                    ? "/logo/facebook-logo.png"
+                    : "/logo/youtube-logo.png"
                 }
                 alt={platform}
                 className="w-6 h-6"
               />
-              {platform.charAt(0).toUpperCase() + platform.slice(1)}
+              {socialLinks[platform].name}
             </button>
           ))}
         </div>
@@ -82,9 +88,10 @@ const SocialMedia = () => {
               className="w-full h-[400px] object-contain bg-white p-4 rounded-t-2xl"
             />
             <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-lg font-semibold py-4 text-center">
-              Visit our{' '}
-              {activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}{' '}
-              {socialLinks[activeTab].label}
+              {t("socialMedia.visit", {
+                platform: socialLinks[activeTab].name,
+                label: socialLinks[activeTab].label,
+              })}
             </div>
           </a>
         </div>
