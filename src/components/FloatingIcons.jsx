@@ -8,7 +8,7 @@ const FloatingIcons = () => {
 
       {/* WhatsApp Icon */}
       <a
-        href="https://wa.me/919876543210" // replace with your number
+        href="https://wa.me/919570276337" // replace with your number
         target="_blank"
         rel="noopener noreferrer"
         className="bg-green-500 p-3 rounded-full shadow-lg hover:scale-110 transition-transform duration-300"
