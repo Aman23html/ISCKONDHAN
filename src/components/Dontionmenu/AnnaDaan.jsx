@@ -47,9 +47,9 @@ const AnnaDaan = () => {
           {t('annaDaan.description2')}<br /><br />
           {t('annaDaan.description3')}<br /><br />
           <span className="font-semibold text-amber-800">
-            {t('annaDaan.shloka')}
+            {/* {t('annaDaan.shloka')} */}
           </span><br />
-          {t('annaDaan.shlokaMeaning')}
+          {/* {t('annaDaan.shlokaMeaning')} */}
         </p>
       </div>
 
