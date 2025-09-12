@@ -42,7 +42,7 @@ const ContactUs = () => {
             <FaPhoneAlt className="text-amber-600 text-xl mt-1" />
             <div>
               <h3 className="text-lg font-bold">Phone</h3>
-              <p>+91 12345 67890</p>
+              <p>+91 95702 76337</p>
             </div>
           </div>
 
@@ -59,9 +59,9 @@ const ContactUs = () => {
             <div>
               <h3 className="text-lg font-bold">Address</h3>
               <p>
-                ISKCON Dhanbad, Near XYZ Chowk,
+                ISKCON Dhanbad, Jagjivan Nagar,
                 <br />
-                Dhanbad, Jharkhand – 826001
+                Dhanbad, Jharkhand – 826003
               </p>
             </div>
           </div>
