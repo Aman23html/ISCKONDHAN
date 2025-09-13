@@ -87,7 +87,7 @@ const ContactUs = () => {
               <FaPhoneAlt className="text-amber-600 text-xl mt-1" />
               <div>
                 <h3 className="text-lg font-bold">Phone</h3>
-                <p>+91 95702 76337</p>
+                <p>+91 95702 76337 , +91 99030 13399</p>
               </div>
             </div>
 
